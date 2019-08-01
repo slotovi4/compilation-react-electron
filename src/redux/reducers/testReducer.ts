@@ -1,7 +1,7 @@
-import { TEST } from "../actions/types";
+import { TEST } from '../actions/types';
 
 export interface IAction {
-    type: "TEST";
+    type: 'TEST';
 }
 
 const initialState = {

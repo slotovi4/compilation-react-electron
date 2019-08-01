@@ -1,31 +1,42 @@
 {
-  "name": "compilation-react-ts-scss",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "axios": "^0.18.0",
-    "react": "^16.8.3",
-    "react-dom": "^16.8.3",
-    "react-redux": "^6.0.1",
-    "react-router-dom": "^4.3.1",
-    "react-scripts-scss-ts": "2.17.1",
-    "redux": "^4.0.1",
-    "redux-thunk": "^2.3.0"
-  },
-  "scripts": {
-    "start": "react-scripts-ts start",
-    "build": "GENERATE_SOURCEMAP=false react-scripts-ts build",
-    "test": "react-scripts-ts test --env=jsdom",
-    "eject": "react-scripts-ts eject"
-  },
-  "devDependencies": {
-    "@bem-react/classname": "^1.4.4",
-    "@types/jest": "^24.0.9",
-    "@types/node": "^11.9.6",
-    "@types/react": "^16.8.6",
-    "@types/react-dom": "^16.8.2",
-    "@types/react-redux": "^7.0.1",
-    "@types/react-router-dom": "^4.3.1",
-    "typescript": "^3.3.3333"
-  }
+    "name": "compilation-react-ts-scss",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "axios": "^0.18.0",
+        "react": "^16.8.3",
+        "react-dom": "^16.8.3",
+        "react-redux": "^6.0.1",
+        "react-router-dom": "^4.3.1",
+        "react-scripts-scss-ts": "2.17.1",
+        "redux": "^4.0.1",
+        "redux-thunk": "^2.3.0"
+    },
+    "scripts": {
+        "start": "react-scripts-ts start",
+        "build": "GENERATE_SOURCEMAP=false react-scripts-ts build",
+        "test": "react-scripts-ts test --env=jsdom",
+        "eject": "react-scripts-ts eject"
+    },
+    "devDependencies": {
+        "@bem-react/classname": "^1.4.4",
+        "@types/jest": "^24.0.9",
+        "@types/node": "^11.9.6",
+        "@types/react": "^16.8.6",
+        "@types/react-dom": "^16.8.2",
+        "@types/react-redux": "^7.0.1",
+        "@types/react-router-dom": "^4.3.1",
+        "@typescript-eslint/eslint-plugin": "^1.13.0",
+        "@typescript-eslint/parser": "^1.13.0",
+        "electron": "^6.0.0",
+        "electron-is-dev": "^1.1.0",
+        "eslint": "^6.1.0",
+        "eslint-config-standard": "^13.0.1",
+        "eslint-plugin-import": "^2.18.2",
+        "eslint-plugin-node": "^9.1.0",
+        "eslint-plugin-promise": "^4.2.1",
+        "eslint-plugin-react": "^7.14.3",
+        "eslint-plugin-standard": "^4.0.0",
+        "typescript": "^3.3.3333"
+    }
 }
