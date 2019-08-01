@@ -5,3 +5,5 @@ npm i<br>
 Настроить package.json(указать name, version)<br>
 <br>
 основа: create-react-app react-typescript-scss-new --scripts-version=react-scripts-scss-ts<br>
+
+https://www.codementor.io/randyfindley/how-to-build-an-electron-app-using-create-react-app-and-electron-builder-ss1k0sfer

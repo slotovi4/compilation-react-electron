@@ -1,4 +1,4 @@
-import { applyMiddleware, compose, createStore } from 'redux';
+import * as reduxModule from 'redux';
 import thunk from 'redux-thunk';
 import rootReducer from './reducers';
 
@@ -6,11 +6,16 @@ const initialState = {};
 
 const middleware = [thunk];
 
-const store = createStore(
+// @ts-ignore
+reduxModule.__DO_NOT_USE__ActionTypes.INIT = '@@redux/INIT';
+// @ts-ignore
+reduxModule.__DO_NOT_USE__ActionTypes.REPLACE = '@@redux/REPLACE';
+
+const store = reduxModule.createStore(
     rootReducer,
     initialState,
-    compose(
-        applyMiddleware(...middleware),
+    reduxModule.compose(
+        reduxModule.applyMiddleware(...middleware),
         // @ts-ignore
         window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
     )

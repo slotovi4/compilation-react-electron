@@ -1,5 +1,9 @@
 import { app, BrowserWindow, ipcMain } from 'electron';
 import { handleSquirrelEvent } from './helpers';
+import installExtension, {
+    REACT_DEVELOPER_TOOLS,
+    REDUX_DEVTOOLS
+} from 'electron-devtools-installer';
 import * as isDev from 'electron-is-dev';
 
 if (!handleSquirrelEvent(app)) {
@@ -24,6 +28,11 @@ if (!handleSquirrelEvent(app)) {
 
         // Listen messages
         ipcMain.on('examFinished', () => console.log(1));
+
+        const installReactTools = await installExtension(REACT_DEVELOPER_TOOLS);
+        const installReduxTools = await installExtension(REDUX_DEVTOOLS);
+
+        Promise.all([installReactTools, installReduxTools]);
 
         mainWindow.webContents.on('did-finish-load', () => {
             if (mainWindow) {
