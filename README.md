@@ -9,5 +9,5 @@
 </ul>
 <br>
 <h5>Запуск:</h5>
-react    -> yarn start
+react    -> yarn start<br>
 electron -> yarn start && yarn start:electron
