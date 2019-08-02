@@ -1,7 +1,6 @@
 {
-    "name": "compilation-react-ts-scss",
+    "name": "compilation-react-electron",
     "version": "0.1.0",
-    "private": true,
     "main": "./build/electron/index.js",
     "dependencies": {
         "axios": "^0.18.0",
