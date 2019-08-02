@@ -1,18 +1,21 @@
 import * as React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { HomeContainer } from './containers';
-import store from './redux/store';
+import { browserHistory, store } from './redux/store';
+import { ConnectedRouter } from 'connected-react-router';
 
 class App extends React.Component {
     public render () {
         return (
             <Provider store={store}>
-                <Router>
-                    <Switch>
-                        <Route exact={true} path="/" component={HomeContainer} />
-                    </Switch>
-                </Router>
+                <ConnectedRouter history={browserHistory}>
+                    <Router>
+                        <Switch>
+                            <Route exact={true} path="/" component={HomeContainer} />
+                        </Switch>
+                    </Router>
+                </ConnectedRouter>
             </Provider>
         );
     }

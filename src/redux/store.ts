@@ -1,24 +1,32 @@
-import * as reduxModule from 'redux';
-import thunk from 'redux-thunk';
-import rootReducer from './reducers';
+import { RematchRootState, init } from '@rematch/core';
+import { connectRouter, routerMiddleware } from 'connected-react-router';
+import { History, createBrowserHistory } from 'history';
+import { testModel } from './models';
 
-const initialState = {};
+const models = {
+    testModel
+};
 
-const middleware = [thunk];
+export const browserHistory: History = createBrowserHistory();
 
-// @ts-ignore
-reduxModule.__DO_NOT_USE__ActionTypes.INIT = '@@redux/INIT';
-// @ts-ignore
-reduxModule.__DO_NOT_USE__ActionTypes.REPLACE = '@@redux/REPLACE';
+export const store = init({
+    models,
+    redux: {
+        initialState: {},
+        reducers: {
+            router: connectRouter(browserHistory)
+        },
+        middlewares: [routerMiddleware(browserHistory)]
+    }
+});
 
-const store = reduxModule.createStore(
-    rootReducer,
-    initialState,
-    reduxModule.compose(
-        reduxModule.applyMiddleware(...middleware),
-        // @ts-ignore
-        window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-    )
-);
+export type Store = typeof store;
+export type Dispatch = typeof store.dispatch;
+export type IRootState = RematchRootState<typeof models> & LoadingPlugin;
 
-export default store;
+interface LoadingPlugin {
+    loading: {
+        models: RematchRootState<typeof models>;
+        effects: Dispatch;
+    };
+}

@@ -1,9 +1,9 @@
-<h3>Сборка React App:</h3>
-TS(react-scripts-ts), redux, router, axios, bem-react/classname, sass<br>
-<br>
-npm i<br>
-Настроить package.json(указать name, version)<br>
-<br>
-основа: create-react-app react-typescript-scss-new --scripts-version=react-scripts-scss-ts<br>
-
-https://www.codementor.io/randyfindley/how-to-build-an-electron-app-using-create-react-app-and-electron-builder-ss1k0sfer
+<h3>Сборка TS React/Electron App:</h3>
+<ul>
+    <li>React</li>
+    <li>Redux-Rematch</li>
+    <li>Electron</li>
+    <li>БЭМ</li>
+    <li>Scss</li>
+    <li>axios</li>
+</ul>
