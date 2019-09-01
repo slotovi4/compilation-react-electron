@@ -1,15 +1,14 @@
 import * as React from 'react';
 import { cn } from '@bem-react/classname';
-import { ReservationModal } from '../';
+import { Place, ReservationModal } from '../';
 import './Reservation.scss';
 
-const initialState: IState = {
-    imgLoaded: false,
-    showModal: false,
-    selectedPlace: null
-};
-
 const Reservation = ({ places }: IProps) => {
+    const initialState: IState = {
+        imgLoaded: false,
+        showModal: false,
+        selectedPlace: null
+    };
     const cl = cn('Reservation');
     const [imgLoaded, setImgLoaded] = React.useState(initialState.imgLoaded);
     const [showModal, setShowModal] = React.useState(initialState.showModal);
@@ -31,25 +30,10 @@ const Reservation = ({ places }: IProps) => {
             <div className={cl('ImageContainer')}>
                 <img src="img/reservation.jpg" alt="reservation_image" onLoad={() => setImgLoaded(true)} />
                 {imgLoaded && (
-                    <>
-                        <div className={cl('PlacesContainer')}>
-                            {places.map((place, i) => {
-                                return (
-                                    <div
-                                        className={cl('Place', { status: place.status })}
-                                        onClick={() => onPlaceClick(place)}
-                                        key={`place_${i}`}
-                                        style={{
-                                            width: place.width,
-                                            height: place.height,
-                                            left: place.left,
-                                            top: place.top
-                                        }}>
-                                    </div>);
-                            })}
-                        </div>
+                    <div className={cl('PlacesContainer')}>
+                        {places.map(place => <Place place={place} onPlaceClick={onPlaceClick} key={`place_${place.id}`} />)}
                         {selectedPlace && <ReservationModal show={showModal} onClose={onCloseModal} place={selectedPlace} />}
-                    </>
+                    </div>
                 )}
             </div>
         </section>
