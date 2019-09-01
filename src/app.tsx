@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import { HomeContainer } from './containers';
+import { ReservationContainer } from './containers';
 import { browserHistory, store } from './redux/store';
 import { ConnectedRouter } from 'connected-react-router';
 
@@ -12,7 +12,7 @@ class App extends React.Component {
                 <ConnectedRouter history={browserHistory}>
                     <Router>
                         <Switch>
-                            <Route exact={true} path="/" component={HomeContainer} />
+                            <Route exact={true} path="/" component={ReservationContainer} />
                         </Switch>
                     </Router>
                 </ConnectedRouter>

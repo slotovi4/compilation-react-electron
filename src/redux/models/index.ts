@@ -1,1 +1,1 @@
-export { default as testModel } from './testModel';
+export { default as reservation } from './reservation';
