@@ -8,6 +8,7 @@ declare module '*.jpg'
 declare interface IPlace {
     x: number;
     y: number;
-    size: number;
-    color: string;
+    width: number;
+    height: number;
+    status: 'reserved' | 'notReserved' | 'inaccessible';
 }

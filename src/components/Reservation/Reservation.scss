@@ -2,5 +2,41 @@
     &-ImageContainer {
         display: flex;
         justify-content: center;
+        position: relative;
+    }
+
+    &-PlacesContainer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: 519px;
+        height: 450;
+    }
+
+    &-Place {
+        position: absolute;
+        cursor: pointer;
+        opacity: 0;
+        border-radius: 4px;
+        transition: opacity 0.3s ease;
+
+        &_status_inaccessible {
+            background-color: red;
+        }
+
+        &_status_notReserved {
+            background-color: chartreuse;
+        }
+
+        &_status_reserved {
+            background-color: orange;
+        }
+
+        &:hover {
+            opacity: 0.3;
+        }
     }
 }
