@@ -1,0 +1,19 @@
+.ReservationModal {
+    &-Title {
+        font-size: 24px;
+    }
+}
+
+.ReactModal__Overlay {
+    opacity: 0!important;
+    transition: opacity 300ms ease-in-out;
+    background-color: rgba(0, 0, 0, 0.2)!important;
+}
+
+.ReactModal__Overlay--after-open{
+    opacity: 1!important;
+}
+
+.ReactModal__Overlay--before-close{
+    opacity: 0!important;
+}

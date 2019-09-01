@@ -3,25 +3,28 @@ import { createModel } from '@rematch/core';
 const initialState: IState = {
     places: [
         {
-            x: 131,
-            y: 32,
+            left: 131,
+            top: 32,
             width: 63,
             height: 43,
-            status: 'inaccessible'
+            status: 'inaccessible',
+            id: '1'
         },
         {
-            x: 225,
-            y: 91,
+            left: 225,
+            top: 91,
             width: 63,
             height: 48,
-            status: 'notReserved'
+            status: 'notReserved',
+            id: '2'
         },
         {
-            x: 75,
-            y: 136,
+            left: 75,
+            top: 136,
             width: 53,
             height: 81,
-            status: 'reserved'
+            status: 'reserved',
+            id: '3'
         }
     ]
 };
