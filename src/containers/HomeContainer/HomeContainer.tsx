@@ -1,6 +1,9 @@
 import * as React from 'react';
-import { Home } from '../../components';
+import { Home, Reservation } from '../../components';
 
-const HomeContainer = () => <Home />;
+const HomeContainer = () => <>
+    <Home />
+    <Reservation />
+</>;
 
 export default HomeContainer;
