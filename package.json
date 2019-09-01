@@ -1,7 +1,7 @@
 {
-    "name": "compilation-react-electron",
+    "name": "hookah",
     "version": "0.1.0",
-    "main": "./build/electron/index.js",
+    "main": "src/index",
     "dependencies": {
         "axios": "^0.18.0",
         "react": "^16.8.3",
@@ -14,7 +14,6 @@
     },
     "scripts": {
         "start": "react-scripts-ts start",
-        "start:electron": "tsc ./src/electron/** --outDir ./build/electron && electron ./build/electron/index.js",
         "build": "GENERATE_SOURCEMAP=false react-scripts-ts build",
         "test": "react-scripts-ts test --env=jsdom",
         "eject": "react-scripts-ts eject"
@@ -31,8 +30,6 @@
         "@typescript-eslint/eslint-plugin": "^1.13.0",
         "@typescript-eslint/parser": "^1.13.0",
         "connected-react-router": "^6.5.2",
-        "electron": "^6.0.0",
-        "electron-is-dev": "^1.1.0",
         "eslint": "^6.1.0",
         "eslint-config-standard": "^13.0.1",
         "eslint-plugin-import": "^2.18.2",
