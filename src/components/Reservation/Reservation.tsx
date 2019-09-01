@@ -20,13 +20,9 @@ const Reservation = ({ places }: IProps) => {
 
     const DrawBackground = () => {
         img.src = 'img/1.jpg';
-        img.alt = 'reservation_image';
         img.addEventListener('load', () => {
             if (ctx && canvasEl.current) {
-                const x = (initialState.canvasW - img.width) * 0.5;
-                const y = (initialState.canvasH - img.height) * 0.5;
-
-                ctx.drawImage(img, x, y);
+                ctx.drawImage(img, 0, 0);
                 setImgLoaded(true);
             }
         });
@@ -53,7 +49,7 @@ const Reservation = ({ places }: IProps) => {
                 Draw();
             }
 
-            Animate();
+            // Animate();
         });
     };
 
